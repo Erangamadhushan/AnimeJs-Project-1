@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Animation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+        <script src="scroll.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <a href="#" class="logo">EM956</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+        </header>
+        <section id="section1">
+            <div class="content">
+                <h2>Level Up Your Website with <b>Anime.js</b></h2>
+                <p>Modern technology refers to the advanced tools, devices, and systems that have been developed in recent years. It encompasses a wide range of technological innovations such as smartphones, social media platforms, and GPS navigation systems.
+                </p>
+                <a href="#" class="btn">Read More...</a>
+            </div>
+            <div class="container"></div>
+        </section>
+        <section id="section2">
+            <div class="description">
+                <p>Modern technology refers to the advanced tools, devices, and systems that have been developed in recent years. It encompasses a wide range of technological innovations such as smartphones, social media platforms, and GPS navigation systems.
+                    Modern technology are modern products, services and infrastructure that are designed and built using scientific knowledge and engineering.
+                </p>
+            </div>
+            <div class="image">
+                
+            </div>
+        </section>
+        <footer>
+            <div>
+                <h4>ABOUT</h4>
+                <p>About Us</p>
+                <p>Community Discussions</p>
+                <p>OpenCollective</p>
+                <p>Patreon</p>
+                <p>CDN Network Map</p>
+            </div>
+            <div>
+                <h4>libraries</h4>
+                <p>Search Libraries</p>
+                <p>API Documentation</p>
+                
+            </div>
+            <div>
+                <h4>STATUS</h4>
+                <p>Status Page</p>
+                <p>cdnjsStatus on Twitter</p>
+            </div>
+            <div>
+                <h4>sponsors</h4>
+                <p>Cloudflare</p>
+                <p>Algolia</p>
+                <p>StatusPage</p>
+                <p>Sentry</p>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script >
+            let container = document.querySelector('.container');
+            for(let i = 1;i <= 64;i++){
+                let dot = document.createElement('div');
+                dot.classList.add('element');
+                container.appendChild(dot);
+            }
+
+            let dotall = document.querySelectorAll('.element');
+            let animation = anime.timeline({
+                targets:dotall,
+                easing:'easeInOutExpo',
+                loop:true,
+                delay:anime.stagger(100,{grid:[10,10],form: 'center'})
+            })
+            animation
+            .add({
+                rotateZ : 180,
+                //translateY:anime.stagger(-20,{grid:[10,10],from: 'center',axis:'y'}),
+                //translateX:anime.stagger(-20,{grid:[10,10],from: 'center',axis:'x'}),
+                
+                opacity:1
+            })
+            .add({
+                borderRadius:['0','50'],
+            })
+            .add({
+                scale:0.2,
+                opacity:1,
+            })
+            .add({
+                scale:0.7,
+                rotateY : 180,
+            })
+            .add({
+                scale:1,
+                opacity:0,
+            })
+            .add({
+                scale:1,
+                opacity:1,
+            })
+            .add({
+
+                rotateX:180,
+            })
+            
+        </script>
+    </body>
+</html>
