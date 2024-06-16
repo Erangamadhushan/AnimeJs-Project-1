@@ -14,3 +14,4 @@ window.addEventListener('scroll',() => {
     }
     
 })
+window.alert("Welcome to my first Anime.js web page");
