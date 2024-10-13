@@ -1,3 +1,3 @@
 Visit Site here ...
 (Developer does not execute important part at this repository )
-<p><a href="https://erangamadhushan.github.io/AnimeJs-Project-1/">Visit here</a></p>
+<p><a href="https://erangamadhushan.github.io/AnimeJs-Project-1/" target="_blank">Visit here</a></p>
